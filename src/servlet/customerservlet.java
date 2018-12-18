@@ -67,7 +67,7 @@ public class customerservlet extends HttpServlet {
 			
 
 			if (service.company_insert(name, manager,phone,address,email)) {
-				out.println("<script>alert('고객사 등록 성공'); location.href='index.do'</script>");
+				out.println("<script>alert('고객사 등록 성공'); location.href='company_list.co'</script>");
 
 			} else {
 				out.println("<script>alert('고객사 등록  실패'); location.href='company_insert_page.co'</script>");
@@ -90,7 +90,7 @@ public class customerservlet extends HttpServlet {
 			
 			String name = request.getParameter("name").trim();
 			 request.setAttribute("companyUpdate", service.companyupdate(name));
-           request.getRequestDispatcher("company_update.jsp").forward(request, response);
+           request.getRequestDispatcher("index.jsp?section=company_update.jsp").forward(request, response);
 			
 		}
 		
@@ -101,12 +101,17 @@ public class customerservlet extends HttpServlet {
 			String address = request.getParameter("company_address").trim();
 			String email = request.getParameter("manager_email").trim();
 			String ori_name = request.getParameter("name").trim();
-
+			System.out.println(name);
+			System.out.println(manager);
+			System.out.println(phone);
+			System.out.println(address);
+			System.out.println(email);
+			System.out.println(ori_name);
 			if (service.company_update(name, manager,phone,address,email,ori_name)) {
-				out.println("<script>alert('고객사 수정 성공'); location.href='index.do'</script>");
+				out.println("<script>alert('고객사 수정 성공'); location.href='company_list.co'</script>");
 
 			} else {
-				out.println("<script>alert('고객사 수정  실패'); location.href='company_insert_page.co'</script>");
+				out.println("<script>alert('고객사 수정  실패'); location.href='company_list.co'</script>");
 
 			}
 		}

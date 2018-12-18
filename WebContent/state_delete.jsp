@@ -5,6 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+	@media only screen and (max-width : 1200px) {
+		#insert_btn {
+			width: 100% !important;
+			display : table !important;
+		}
+	}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -70,8 +78,8 @@
 				
 							</select>
 						</div>
-						<input class="button btn-lg" value="삭제하기" type="submit" style = "font-size : 15px; display:inline;">
-						<input class="button btn-lg" value="메인으로" type="button" onclick="location.href='index.do'" style = "font-size : 15px; display:inline;">
+						<input id = "insert_btn" class="button btn-lg" value="삭제하기" type="submit" style = "font-size : 15px; display:inline;">
+						<input id = "insert_btn" class="button btn-lg" value="메인으로" type="button" onclick="location.href='index.do'" style = "font-size : 15px; display:inline;">
 						<div class="space20"></div>
 					</form>
 				</div>

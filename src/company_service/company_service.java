@@ -38,7 +38,7 @@ public class company_service {
 
 	
 	public boolean company_update(String name, String manager, String phone , String address, String email, String ori_name) {
-		if (companydao.selectOne(name) == null) {
+		if (!(companydao.selectOne(ori_name) == null)) {
 			companybean companybean = new companybean();
 			companybean.setName(name);
 			companybean.setManager(manager);
