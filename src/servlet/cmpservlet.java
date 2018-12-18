@@ -67,7 +67,7 @@ public class cmpservlet extends HttpServlet {
 			}
 
 		} else if (reqUri.equals(contextPath + "/state_insert_page.do")) {
-			request.getRequestDispatcher("state_insert.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp?section=state_insert.jsp").forward(request, response);
 		}
 
 		else if (reqUri.equals(contextPath + "/test.do")) {
@@ -95,7 +95,7 @@ public class cmpservlet extends HttpServlet {
 			
 		}
 		else if (reqUri.equals(contextPath + "/state_delete_page.do")) {
-			request.getRequestDispatcher("state_delete.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp?section=state_delete.jsp").forward(request, response);
 		}
 		
 

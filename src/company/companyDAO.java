@@ -103,7 +103,7 @@ public class companyDAO {
 	}
 	
 	public List<companybean> selectAll(){
-		String sql = "SELECT name,manager,phone,address,email FROM customer_tbl";
+		String sql = "SELECT name,address,manager,phone,email FROM customer_tbl";
 		List<companybean> companyList = new ArrayList<companybean>();
 		
 		try {
@@ -112,9 +112,9 @@ public class companyDAO {
 			while(rs.next()) {
 			    companybean companybean = new companybean();
 			    companybean.setName( rs.getString(1));
-				companybean.setManager( rs.getString(2));
-				companybean.setPhone( rs.getString(3));
-				companybean.setAddress( rs.getString(4));
+				companybean.setAddress( rs.getString(2));
+				companybean.setManager( rs.getString(3));
+				companybean.setPhone( rs.getString(4));
 				companybean.setEmail( rs.getString(5));
 				companyList.add(companybean);
 			}

@@ -76,13 +76,13 @@ public class customerservlet extends HttpServlet {
 		}
 		else if (reqUri.equals(contextPath + "/company_insert_page.co")) {
 				System.out.println(contextPath + "/company_insert_page.co");
-			request.getRequestDispatcher("company_insert.jsp").forward(request, response);
+			request.getRequestDispatcher("index.jsp?section=company_insert.jsp").forward(request, response);
 
 		}
 		
 		else if (reqUri.equals(contextPath + "/company_list.co")) {
 			 request.setAttribute("companyList", service.getcompanyList());
-            request.getRequestDispatcher("company_list.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp?section=company_list.jsp").forward(request, response);
 			
 		}
 		
